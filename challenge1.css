@@ -9,9 +9,10 @@
 
 body {
   margin: 0;
+  width: 1440px;
 }
 
-/* Header container */
+/* The header section with navs and logo */
 header {
   background-color: #ffffff;
   width: 1440px;
@@ -92,8 +93,7 @@ div.hero-subtitle {
   letter-spacing: 0.2px;
   color: #ffffff;
   width: 937px;
-  height: 160px;
-  padding: 10px 34px 10px 34px;
+
   margin-bottom: 17px;
 }
 
@@ -162,7 +162,309 @@ div.hero-subtitle {
   bottom: -55%;
   left: 50%;
   transform: translateX(-68%);
-  margin-bottom: 128.91px;
-  margin-bottom: 72.09px;
+}
+
+/* The horizontal line */
+.horizontal-line {
+  padding-top: 569.91px;
+  margin-left: 278px;
+}
+
+/* The verbose/lengthy section */
+.workings {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  opacity: 80%;
+  color: #000000;
+  height: 36px;
+  margin-top: 72.09px;
+  margin-left: 495px;
+  margin-bottom: 59px;
+}
+
+.create {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #FA4A0C;
+  margin-bottom: 17px;
+}
+
+.account {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  width: 561px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: #252B42;
+  margin-bottom: 17px;
+}
+
+.password {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  width: 500px;
+}
+
+.w1 {
+  flex-direction: column;
+  width: 568px;
+  height: 280px;
+  margin-top: 273px;
+  margin-right: 154px;
+}
+
+.first {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+div.login {
+  margin-top: 78px;
+  margin-left: 245px;
+}
+
+.explore {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #FA4A0C;
+  margin-bottom: 17px;
+}
+
+.shop {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  width: 480px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: #252B42;
+  margin-bottom: 17px;
+}
+
+.meals {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  width: 462px;
+}
+
+.w2 {
+  flex-direction: column;
+  width: 568px;
+  height: 280px;
+  margin-left: 50px;
+  margin-top: 88px;
+}
+
+.second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+
+}
+
+div.delicious {
+  margin-right: 154px;
+  margin: auto;
+}
+
+.checkout {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #FA4A0C;
+  margin-bottom: 17px;
+}
+
+.deliver {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  width: 559px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: #252B42;
+  margin-bottom: 17px;
+}
+
+.ease {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  width: 460px;
+}
+
+.w3 {
+  flex-direction: column;
+  width: 568px;
+  height: 280px;
+  margin-top: 273px;
+  margin-right: 154px;
+}
+
+.third {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0px;
+}
+
+div.checkoutimg {
+  margin-top: 78px;
+  margin-left: 245px;
+}
+
+/* The implementation of the penultimate section of the landing page */
+.penultimate {
+  background-image: url('./images/Rectangle\ 47.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 516px;
+  width: 1440px;
+  text-align: center;
+  margin-bottom: 36.9px;
+}
+
+.penultimate-subtitle {
+  width: 503px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+  margin-top: 140px;
+  align-items: center;
+  margin-left: 168.5px;
+  margin-bottom: 25px;
+}
+
+.penultimate-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+  margin-bottom: 60px;
+}
+
+.penultimate-buttons {
+  display: inline-flex;
+  gap: 16px;
+}
+
+.btn-play {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  width: 142px;
+  height: 64px;
+  border-radius: 10px;
+  padding: 18px 31px;
+  background-color: #FA4A0C;
+  color: #ffffff;
+  border: #FA4A0C;
+}
+
+.btn-app {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+  width: 178px;
+  height: 64px;
+  background-color: transparent;
+  padding: 16px 45px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+}
+
+div.penultimate-subtitle { 
+  margin-top: 73px; 
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.penultimate-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* This is the footer aspect of the landing page */
+.footer {
+  width: 1210px;
+  height: 133px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footlogo {
+  width: 206px;
+  height: 76px;
+  margin-left: 80px;
+  margin-right: 222.5px;
+  margin-top: 26.12px;
+  margin-bottom: 28.12px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.socials {
+  margin-top: 45px;
+  margin-right: 276px;
+}
+
+.twitter {
+  margin-right: 24px;
+}
+
+.facebook {
+  margin-right: 24px;
+}
+
+.wright {
+  font-family: 'Roboto',sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+  color: #5C5C5C;
+  width: 190px;
+}
+
+.copywright {
+  margin-top: 48px;
 }
 
