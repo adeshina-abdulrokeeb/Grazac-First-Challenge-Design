@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food delivery landing page</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./challenge1.css" />
+    <style>
+      /* Reset & basic layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+}
+
+/* The header section with navs and logo */
+header {
+  background-color: #ffffff;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none; /* Only show on mobile */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #252b42;
+  transition: all 0.3s ease;
+}
+
+.navbar {
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+   width: 580px;
+/*  height: 48px;
+  margin-top: 53px;
+  margin-bottom: 55px;
+  margin-right: 40px; */
+}
+@media screen and (max-width: 870px) {
+  .navbar{
+    width: auto ;
+  }
+}
+@media screen and (max-width: 768px)  {
+  .navbar{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+  
+}
+.nav-list {
+  display: flex;
+  gap: 94px;
+}
+
+li.home {
+  color: #fa4a0c;
+}
+
+.left {
+  width: 246px;
+  height: 101.76px;
+  /* margin-left: 70px;
+  margin-top: 26.12px;
+  margin-bottom: 28.12px;
+  padding-right: 20px;
+  padding-left: 20px; */
+}
+
+li {
+  list-style-type: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #252b42;
+}
+
+
+
+/* Hero Section */
+.hero {
+  background-image: url("./images/Rectangle\ 48.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 619px;
+  /* width: 1440px; */
+}
+
+div.hero-subtitle {
+  margin-bottom: 53px;
+  margin-top: 73px;
+}
+
+.hero-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #f6f6f6;
+}
+
+.hero-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 80px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  width: 937px;
+
+
+  margin-bottom: 17px;
+}
+@media screen and (max-width: 1024px) {
+  .hero-title{
+    width: 80%;
+    margin: auto;
+  }
+  
+}
+.hero-description {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: #f6f6f6;
+  height: 38px;
+  padding: 10px 88px 48px 89px;
+  margin-bottom: 18px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 120px 0;
+  position: relative;
+}
+
+.hero-buttons {
+  display: inline-flex;
+  gap: 34px;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  width: 236px;
+  height: 68px;
+  border-radius: 30px;
+  padding: 16px 58.5px;
+  background-color: #fa4a0c;
+  color: #ffffff;
+  box-shadow: 0px 10px 30px #b73227 20%;
+  border: #fa4a0c;
+}
+
+.btn-outline {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #ffffff;
+  width: 236px;
+  height: 68px;
+  background-color: transparent;
+  padding: 16px;
+  border-radius: 30px;
+  border: 1px solid #ffffff;
+}
+
+.hero-mock {
+  width: 548px;
+  height: 640px;
+  position: absolute;
+  bottom: -55%;
+  left: 50%;
+  transform: translateX(-68%);
+}
+
+/* The horizontal line */
+.horizontal-line {
+  margin-top: 569.91px;
+  display: flex;
+  justify-content: center;
+  height: 4px;
+  width: 100%;
+background-color: #e4e4e4;
+  /* margin-left: 278px; */
+}
+
+/* The verbose/lengthy section */
+.workings {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  opacity: 80%;
+  color: #000000;
+  height: 36px;
+  margin-top: 72.09px;
+  /* margin-left: 495px; */
+  text-align: center;
+  margin-bottom: 59px;
+}
+
+.create {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #fa4a0c;
+  margin-bottom: 17px;
+} 
+.account {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  width: 561px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: #252b42;
+  margin-bottom: 17px;
+}
+
+.password {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  width: 500px;
+}
+
+.w1 {
+  flex-direction: column;
+  width: 568px;
+}
+
+.first {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.explore {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #fa4a0c;
+  margin-bottom: 17px;
+}
+
+.shop {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  width: 480px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: #252b42;
+  margin-bottom: 17px;
+}
+
+.meals {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  width: 462px;
+}
+
+.w2 {
+  flex-direction: column;
+  width: 568px;
+
+  /* margin-left: 50px; */
+  margin-top: 88px;
+}
+
+.second {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+
+}
+
+div.delicious {
+  margin-right: 154px;
+  margin: auto;
+}
+
+.checkout {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #fa4a0c;
+  margin-bottom: 17px;
+}
+
+.deliver {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  width: 559px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: #252b42;
+  margin-bottom: 17px;
+}
+
+.ease {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: #737373;
+  width: 460px;
+}
+
+.w3 {
+  flex-direction: column;
+  width: 568px;
+  margin-top: 273px;
+
+}
+
+.third {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* The implementation of the penultimate section of the landing page */
+.penultimate {
+  background-image: url("./images/Rectangle\ 47.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 516px;
+  /* width: 1440px; */
+  text-align: center;
+  margin-bottom: 36.9px;
+}
+
+.penultimate-subtitle {
+  width: 503px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 57px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  margin-top: 140px;
+  align-items: center;
+  margin-left: 168.5px;
+  margin-bottom: 25px;
+}
+
+.penultimate-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.penultimate-buttons {
+  display: inline-flex;
+  gap: 16px;
+}
+
+.btn-play {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  width: 142px;
+  height: 64px;
+  border-radius: 10px;
+  padding: 18px 31px;
+  background-color: #fa4a0c;
+  color: #ffffff;
+  border: #fa4a0c;
+}
+
+.btn-app {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  width: 178px;
+  height: 64px;
+  background-color: transparent;
+  padding: 16px 45px;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+}
+
+div.penultimate-subtitle {
+  margin-top: 73px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.penultimate-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+/* This is the footer aspect of the landing page */
+.footer {
+  /* width: 1210px; */
+  height: 133px;
+  display: flex;
+align-items: center;
+  justify-content: space-evenly;
+}
+
+.footlogo {
+  width: 206px;
+  height: 76px;
+  margin-top: 26.12px;
+  margin-bottom: 28.12px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.socials {
+  margin-top: 45px;
+display: flex;
+align-items: center;
+gap: 24px;
+}
+
+.wright {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+  color: #5c5c5c;
+  width: 190px;
+}
+
+.copywright {
+  margin-top: 48px;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- The header section with navs and logo -->
+      <header class="header">
+        <div class="logo1">
+          <img src="./images/left.png" alt="bella's logo" class="left" />
+        </div>
+        
+        <!--  Menu toggle (checkbox) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
+        
+        <div class="navbar">
+          <nav aria-label="Main Navigation">
+            <ul class="nav-list">
+              <li class="home">Home</li>
+              <li class="product">Product</li>
+              <li class="faq">Faq</li>
+              <li class="contact">Contact</li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- The hero section -->
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <div><h6 class="hero-subtitle">Food app</h6></div>
+            <h1 class="hero-title">
+              Why stay hungry when you can order form Bella Onojie
+            </h1>
+            <p class="hero-description">
+              Download the bella onoje's food app now on
+            </p>
+            <div class="hero-buttons">
+              <button class="btn-primary">Playstore</button>
+              <button class="btn-outline">App store</button>
+            </div>
+        </div>
+        <div class="hero-mock">
+          <img src="./images/Group 53.png" alt="hero-mock" class="mock" />
+        </div>
+      </div>
+    </section>
+    <!-- The horizontal line -->
+    <section class="horizontal-line">
+      <!-- <img src="./images/HR.png" alt="custom-line" class="custom-line" /> -->
+    </section>
+    <!-- The verbose/lengthy section -->
+    <section class="showbiz">
+      <div class="info">
+        <h2 class="workings">How the app works</h2>
+      </div>
+      
+      <div class="first">
+        <div>
+          <img src="./images/Rectangle.png" alt="login-image" class="login" />
+        </div>
+        <div class="w1">
+          <h4 class="create">Create an account</h4>
+          <h2 class="account">
+            Create/login to an existing account to get started
+          </h2>
+          <p class="password">
+            An account is created with your email and a desired password
+          </p>
+        </div>
+      </div>
+      
+      <div class="second">
+        <div class="w2">
+          <h4 class="explore">Explore varieties</h4>
+          <h2 class="shop">Shop for your favorites meal as e dey hot.</h2>
+          <p class="meals">
+            Shop for your favorite meals or drinks and enjoy while doing it.
+          </p>
+        </div>
+        <div>
+          <img
+          src="./images/Rectangle (2).png"
+          alt="delicious-img"
+          class="delicious"
+          />
+        </div>
+      </div>
+      
+      <div class="third">
+        <div>
+          <img
+          src="./images/Rectangle (3).png"
+          alt="checkout-img"
+          class="checkoutimg"
+          />
+        </div>
+        <div class="w3">
+          <h4 class="checkout">Checkout</h4>
+          <h2 class="deliver">When you done check out and get it delivered.</h2> Nip AD£X, [Aug 19, 2025 at 16:14]
+          <p class="ease">
+            When you done check out and get it delivered with ease.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- The implementation of the penultimate section of the landing page -->
+    <section class="penultimate">
+      <div class="penultimate-content">
+        <div class="penultimate-text">
+          <h2 class="penultimate-subtitle">Download the app now.</h2>
+          <p class="penultimate-title">
+            Available on your favorite store. Start your premium experience now
+          </p>
+          <div class="penultimate-buttons">
+            <button class="btn-play">Playstore</button>
+            <button class="btn-app">App store</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- This is the footer aspect of the landing page -->
+    <footer class="footer">
+      <div class="bella-logo">
+        <img src="./images/image 12.png" alt="image12" class="footlogo" />
+      </div>
+      <div class="socials">
+        <img src="./images/twitter (2).png" alt="twitter" class="twitter" />
+        <img src="./images/facebook.png" alt="facebook" class="facebook" />
+        <img src="./images/instagram.png" alt="instagram" class="instagram" />
+      </div>
+      <div class="copywright">
+        <p class="wright"><small>Copywright 2020 Bella Onojie.com</small></p>
+      </div>
+    </footer>
+  </div>
+  </body>
+  </html>

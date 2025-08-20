@@ -1,22 +1,28 @@
 /* Reset & basic layout */
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+  
+.container {
+  margin: auto;
+  width: 100%;
+}
 
-body {
-  margin: 0;
-  width: 1440px;
+/* Responsiveness of the body */
+@media screen and (max-width: 1440px) {
+  .body {
+    width: 95%;
+  }
 }
 
 /* The header section with navs and logo */
 header {
   background-color: #ffffff;
-  width: 1440px;
+  width: 95%;
   display: flex;
+  justify-content: space-between;
 }
 
 .menu-toggle {
@@ -38,16 +44,11 @@ header {
 }
 
 .navbar {
-  margin: 0 auto;
   padding: 10px 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 580px;
-  height: 48px;
-  margin-top: 53px;
-  margin-bottom: 55px;
-  margin-right: 40px;
 }
 
 .nav-list {
@@ -62,11 +63,6 @@ li.home {
 .left {
   width: 246px;
   height: 101.76px;
-  margin-left: 70px;
-  margin-top: 26.12px;
-  margin-bottom: 28.12px;
-  padding-right: 20px;
-  padding-left: 20px;
 }
 
 li {
@@ -81,32 +77,33 @@ li {
 
 /* Responsiveness of the header aspect */
 @media screen and (max-width: 768px) {
-  /* Only show logo and hamburger */
+  /* Only show logo and hamburger when not toggled*/
 .left {
   width: 104px;
   height: 51.37px;
-  margin-left: 25px;
   margin-top: 17px;
-  margin-right: 229px;
 }
-  .nav-list {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 95%;
+}
+.nav-list {
     display: none;
     flex-direction: column;
-    background-color: #ff00ff;
-    position: absolute;
-    top: 70px;    /* Adjust to header's height */
-    right: 20px;
+    background-color: #fff;
     padding: 10px;
     gap: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
-
-   li {
+li {
   line-height: 14px;
   letter-spacing: 0px;
    }
 
-  .hamburger {
+.hamburger {
     display: flex;
     margin-top: 40px;
     width: 20px;
@@ -127,7 +124,8 @@ li {
   background-repeat: no-repeat;
   background-position: center;
   height: 619px;
-  width: 1440px;
+  width: 100%;
+  margin: auto;
 }
 
 div.hero-subtitle {
@@ -152,7 +150,6 @@ div.hero-subtitle {
   letter-spacing: 0.2px;
   color: #ffffff;
   width: 937px;
-
   margin-bottom: 17px;
 }
 
@@ -197,6 +194,7 @@ div.hero-subtitle {
   color: #ffffff;
   box-shadow: 0px 10px 30px #B73227 20%;
   border: #FA4A0C;
+  cursor: pointer;
 }
 
 .btn-outline {
@@ -212,6 +210,7 @@ div.hero-subtitle {
   padding: 16px;
   border-radius: 30px;
   border: 1px solid #ffffff;
+  cursor:pointer
 }
 
 .hero-mock {
@@ -223,12 +222,116 @@ div.hero-subtitle {
   transform: translateX(-68%);
 }
 
-/* The horizontal line */
-.horizontal-line {
-  padding-top: 569.91px;
-  margin-left: 278px;
+/* Responsiveness of the hero section */
+@media screen and (max-width: 768px) {
+  /* exclusion of the background image */
+  .hero {
+  background-image: none !important;
+  width: 95%;
+  margin-top: 50px;
+  }
+  .hero-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  color: #737373;
+  width: 80px;
+  height: 24px;
+  margin:auto;
+  margin-top: -93.63px;
+  margin-bottom: 17px;
+}
+  .hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42.5px;
+  letter-spacing: 0.2px;
+  color: #252b42;
+  width: 391px;
+  margin: auto;
+  margin-bottom: 27px;
+}
+.hero-description {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0.2px;
+  width: 570px;
+  color: #737373;
+  height: 76px;
+  padding: 10px 88px 48px 89px;
+  margin: auto;
+  gap: 7px;
+  margin-bottom: 50px;
+}
+.hero-buttons {
+  flex-direction: column;
+}
+.btn-primary {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  width: 236px;
+  height: 68px;
+  border-radius: 30px;
+  padding: 16px 58.5px;
+  background-color: #FA4A0C;
+  color: #ffffff;
+  box-shadow: 0px 40px 40px #000000 7%;
+  border: #FA4A0C;
+  cursor: pointer;
 }
 
+.btn-outline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 0.1px;
+  color: #fa4a0c;
+  width: 236px;
+  height: 68px;
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 30px;
+  border: 1px solid #fa4a0c;
+  margin-bottom: 50px;
+  cursor:pointer
+}
+.hero-mock {
+  margin-top: 22px;
+  position: absolute;
+  bottom: -55%;
+  left: 60%;
+  transform: translateX(-68%);
+}
+.mock {
+  width: 512px;
+  height: 624px;
+}
+}
+
+/* The horizontal line */
+.horizontal-line {
+  margin-top: 569.91px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  background-color: #e4e4e4;
+}
+
+.custom-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* The verbose/lengthy section */
 .workings {
   font-family: 'Poppins', sans-serif;
@@ -240,7 +343,7 @@ div.hero-subtitle {
   color: #000000;
   height: 36px;
   margin-top: 72.09px;
-  margin-left: 495px;
+  text-align: center;
   margin-bottom: 59px;
 }
 
@@ -278,15 +381,14 @@ div.hero-subtitle {
 .w1 {
   flex-direction: column;
   width: 568px;
-  height: 280px;
-  margin-top: 273px;
-  margin-right: 154px;
 }
 
 .first {
   display: flex;
+  width: 80%;
+  margin: auto;
   justify-content: center;
-  margin-bottom: 0px;
+  align-items: center;
 }
 
 div.login {
@@ -328,8 +430,6 @@ div.login {
 .w2 {
   flex-direction: column;
   width: 568px;
-  height: 280px;
-  margin-left: 50px;
   margin-top: 88px;
 }
 
@@ -337,8 +437,7 @@ div.login {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 0px;
-
+  flex-wrap: wrap;
 }
 
 div.delicious {
@@ -380,20 +479,13 @@ div.delicious {
 .w3 {
   flex-direction: column;
   width: 568px;
-  height: 280px;
   margin-top: 273px;
-  margin-right: 154px;
 }
 
 .third {
   display: flex;
   justify-content: center;
-  margin-bottom: 0px;
-}
-
-div.checkoutimg {
-  margin-top: 78px;
-  margin-left: 245px;
+  flex-wrap: wrap;
 }
 
 /* The implementation of the penultimate section of the landing page */
@@ -403,7 +495,6 @@ div.checkoutimg {
   background-repeat: no-repeat;
   background-position: center;
   height: 516px;
-  width: 1440px;
   text-align: center;
   margin-bottom: 36.9px;
 }
@@ -450,6 +541,7 @@ div.checkoutimg {
   background-color: #FA4A0C;
   color: #ffffff;
   border: #FA4A0C;
+  cursor:pointer
 }
 
 .btn-app {
@@ -459,12 +551,13 @@ div.checkoutimg {
   line-height: 28px;
   letter-spacing: 0.2px;
   color: #FFFFFF;
-  width: 178px;
+  width: 220px;
   height: 64px;
   background-color: transparent;
   padding: 16px 45px;
   border-radius: 10px;
   border: 1px solid #ffffff;
+  cursor: pointer;
 }
 
 div.penultimate-subtitle { 
@@ -483,17 +576,15 @@ div.penultimate-subtitle {
 
 /* This is the footer aspect of the landing page */
 .footer {
-  width: 1210px;
   height: 133px;
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
 }
 
 .footlogo {
   width: 206px;
   height: 76px;
-  margin-left: 80px;
-  margin-right: 222.5px;
   margin-top: 26.12px;
   margin-bottom: 28.12px;
   padding-right: 20px;
@@ -502,15 +593,9 @@ div.penultimate-subtitle {
 
 .socials {
   margin-top: 45px;
-  margin-right: 276px;
-}
-
-.twitter {
-  margin-right: 24px;
-}
-
-.facebook {
-  margin-right: 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .wright {
@@ -526,5 +611,3 @@ div.penultimate-subtitle {
 .copywright {
   margin-top: 48px;
 }
-
-
