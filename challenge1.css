@@ -8,6 +8,7 @@
 .container {
   margin: auto;
   width: 100%;
+  
 }
 
 /* Responsiveness of the body */
@@ -328,13 +329,17 @@ div.hero-subtitle {
   align-items: center;
   width: 70%;
   background-color: #e4e4e4;
+  flex-direction: column;
+  text-align: center;
 }
 
-.custom-line {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Responsiveness of the horizontal line */
+@media screen and (max-width: 768px) {
+  .horizontal-line {
+    width: 100%;
+  }
 }
+
 /* The verbose/lengthy section */
 .workings {
   font-family: 'Poppins', sans-serif;
@@ -348,9 +353,6 @@ div.hero-subtitle {
   margin-top: 72.09px;
   text-align: center;
   margin-bottom: 59px;
-}
-.h-line {
-  display: none;
 }
 
 .create {
@@ -499,52 +501,50 @@ div.delicious {
 .showbiz{
   width: 95%;
   margin: auto;
-  }
+  display: flex;
+  flex-direction: column;  
+  align-items: center; 
+}
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 .workings {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 24px;
   width: 242px;
-  margin: auto;
   line-height: 36px;
   letter-spacing: 0.1px;
   color: #000000;
   height: 36px;
-  text-align: center;
-}
-.h-line {
-  border-left: 1px solid #B4B4B4; 
-  height: 223px;
-  position: absolute;
-  left: 45%;
-  margin-left: -0.5px;
-  top: 330px;
+  margin-top: 49px;
+  margin-bottom: 65px;
 }
 .create {
   width: 242px;
   margin-bottom: 40px;
   text-align:center;
-  align-items: center;
-  justify-content: center;
 }
 .account {
   width: 337px;
   text-align: center;
-  margin: auto;
   margin-bottom: 40px;
 }
 .password {
   width: 257px;
   text-align: center;
-  margin: auto;
   margin-top: 50px;
 }
 .w1 {
-  display: block;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  width: 80%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;    
+  justify-content: center;   
+  align-items: center;       
+  text-align: center; 
 }
 .first {
   display: block;
@@ -632,8 +632,6 @@ div.delicious {
   justify-content: center;
   flex-wrap: wrap;
 }
-
-
 }
 
 /* The implementation of the penultimate section of the landing page */
