@@ -549,7 +549,7 @@ div.delicious {
 .first {
   display: block;
   flex-wrap: wrap-reverse;
-  width: 80%;
+  width: 95%;
   margin: auto;
 }
 div.login {
@@ -572,17 +572,18 @@ div.login {
   text-align: center;
 }
 .w2 {
-  display: block;
+  display: flex;
+  justify-content: center;
   text-align: center;
   align-items: center;
   flex-direction: column;
-  width: 80%;
+  width: 95%;
   margin-top: 88px;
 }
 
 .second {
   display: block;
-  width: 80%;
+  width: 95%;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -604,7 +605,7 @@ div.delicious {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 40px;
-  width: 559px;
+  width: 316px;
   line-height: 57px;
   letter-spacing: 0.2px;
   color: #252B42;
@@ -618,13 +619,18 @@ div.delicious {
   line-height: 38px;
   letter-spacing: 0.2px;
   color: #737373;
-  width: 460px;
+  width: 257px;
 }
 
 .w3 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
   flex-direction: column;
-  width: 568px;
-  margin-top: 273px;
+  width: 95%;
+  margin-top: 88px;
+  margin-bottom: 70px;
 }
 
 .third {
